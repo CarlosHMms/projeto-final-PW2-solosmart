@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
+    <?php echo app('Illuminate\Foundation\Vite')('resources/css/app.css'); ?>
     <link href="https://fonts.cdnfonts.com/css/fox-on-the-run" rel="stylesheet">
     <title>Perfil</title>
 </head>
@@ -55,4 +55,4 @@
         </div>
     </div>
 </body>
-</html>
+</html><?php /**PATH /var/www/html/GitHub/projeto-final-PW2-solosmart/solosmart/resources/views/perfil.blade.php ENDPATH**/ ?>
