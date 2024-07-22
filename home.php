@@ -3,10 +3,10 @@
 
 <head>
   <title>SoloSmart - Home</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="icon" href="data:,">
 </head>
 
@@ -30,8 +30,7 @@
         <h4 class="humidityColor"><i class="fas fa-tint"></i> UMIDIDADE</h4>
         <p class="humidityColor"><span class="reading"><span id="ESP32_01_Humd"></span> &percnt;</span></p>
 
-        <p class="statusreadColor"><span>Status de Leitura Sensor DHT11 : </span><span
-            id="ESP32_01_Status_Read_DHT11"></span></p>
+        <p class="statusreadColor"><span>Status de Leitura Sensor DHT11 : </span><span id="ESP32_01_Status_Read_DHT11"></span></p>
       </div>
 
       <div class="card">
