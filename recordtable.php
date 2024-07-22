@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>SoloSmart DATABASE</title>
+    <title>SoloSmart - DATABASE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
   </head>
   
   <body>
     <div class="topnav">
-      <h3>SoloSmart DATABASE</h3>
+      <h3>SoloSmart - DATABASE</h3>
     </div>
     
     <br>
