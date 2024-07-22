@@ -1,107 +1,14 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>ESP32 DHT11 DATABASE</title>
+    <title>SoloSmart DATABASE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      html {font-family: Arial; display: inline-block; text-align: center;}
-      p {font-size: 1.2rem;}
-      h4 {font-size: 0.8rem;}
-      body {margin: 0;}
-      /* ----------------------------------- TOPNAV STYLE */
-      .topnav {overflow: hidden; background-color: green; color: white; font-size: 1.2rem;}
-      /* ----------------------------------- */
-      
-      /* ----------------------------------- TABLE STYLE */
-      .styled-table {
-        border-collapse: collapse;
-        margin-left: auto; 
-        margin-right: auto;
-        font-size: 0.9em;
-        font-family: sans-serif;
-        min-width: 400px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        border-radius: 0.5em;
-        overflow: hidden;
-        width: 90%;
-      }
-
-      .styled-table thead tr {
-        background-color: green;
-        color: white;
-        text-align: left;
-      }
-
-      .styled-table th {
-        padding: 12px 15px;
-        text-align: left;
-      }
-
-      .styled-table td {
-        padding: 12px 15px;
-        text-align: left;
-      }
-
-      .styled-table tbody tr:nth-of-type(even) {
-        background-color: LightGrey;
-      }
-
-      .styled-table tbody tr.active-row {
-        font-weight: bold;
-        color: green;
-      }
-
-      .bdr {
-        border-right: 1px solid white;
-        border-left: 1px solid white;
-      }
-      
-      td:hover {background-color: rgba(12, 105, 128, 0.21);}
-      tr:hover {background-color: rgba(12, 105, 128, 0.15);}
-      .styled-table tbody tr:nth-of-type(even):hover {background-color: rgba(12, 105, 128, 0.15);}
-      /* ----------------------------------- */
-      
-      /* ----------------------------------- BUTTON STYLE */
-      .btn-group .button {
-        background-color: green; 
-        border: 1px solid black;
-        color: white;
-        padding: 5px 8px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 14px;
-        cursor: pointer;
-        float: center;
-      }
-
-      .btn-group .button:not(:last-child) {
-        border-right: none; /* Prevent double borders */
-      }
-
-      .btn-group .button:hover {
-        background-color: DarkGreen;
-      }
-
-      .btn-group .button:active {
-        background-color: green;
-        transform: translateY(1px);
-      }
-
-      .btn-group .button:disabled,
-      .button.disabled{
-        color:white;
-        background-color: gray; 
-        cursor: not-allowed;
-        pointer-events:none;
-      }
-      /* ----------------------------------- */
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   
   <body>
     <div class="topnav">
-      <h3>ESP32 DHT11 DATABASE</h3>
+      <h3>SoloSmart DATABASE</h3>
     </div>
     
     <br>
@@ -127,12 +34,7 @@
         <?php
           include 'database.php';
           $num = 0;
-          //------------------------------------------------------------ The process for displaying a record table containing the DHT11 sensor data and the state of the LEDs.
           $pdo = Database::connect();
-          // replace_with_your_table_name, on this project I use the table name 'esp32_table_dht11_leds_record'.
-          // This table is used to store and record DHT11 sensor data updated by ESP32. 
-          // This table is also used to store and record the state of the LEDs, the state of the LEDs is controlled from the "home.php" page. 
-          // To store data, this table is operated with the "INSERT" command, so this table will contain many rows.
           $sql = 'SELECT * FROM esp32_table_dht11_leds_record ORDER BY date, time';
           foreach ($pdo->query($sql) as $row) {
             $date = date_create($row['date']);
@@ -176,98 +78,6 @@
 
     <br>
     
-    <script>
-      //------------------------------------------------------------
-      var current_page = 1;
-      var records_per_page = 10;
-      var l = document.getElementById("table_id").rows.length
-      //------------------------------------------------------------
-      
-      //------------------------------------------------------------
-      function apply_Number_of_Rows() {
-        var x = document.getElementById("number_of_rows").value;
-        records_per_page = x;
-        changePage(current_page);
-      }
-      //------------------------------------------------------------
-      
-      //------------------------------------------------------------
-      function prevPage() {
-        if (current_page > 1) {
-            current_page--;
-            changePage(current_page);
-        }
-      }
-      //------------------------------------------------------------
-      
-      //------------------------------------------------------------
-      function nextPage() {
-        if (current_page < numPages()) {
-            current_page++;
-            changePage(current_page);
-        }
-      }
-      //------------------------------------------------------------
-      
-      //------------------------------------------------------------
-      function changePage(page) {
-        var btn_next = document.getElementById("btn_next");
-        var btn_prev = document.getElementById("btn_prev");
-        var listing_table = document.getElementById("table_id");
-        var page_span = document.getElementById("page");
-       
-        // Validate page
-        if (page < 1) page = 1;
-        if (page > numPages()) page = numPages();
-
-        [...listing_table.getElementsByTagName('tr')].forEach((tr)=>{
-            tr.style.display='none'; // reset all to not display
-        });
-        listing_table.rows[0].style.display = ""; // display the title row
-
-        for (var i = (page-1) * records_per_page + 1; i < (page * records_per_page) + 1; i++) {
-          if (listing_table.rows[i]) {
-            listing_table.rows[i].style.display = ""
-          } else {
-            continue;
-          }
-        }
-          
-        page_span.innerHTML = page + "/" + numPages() + " (Número Total de Linhas = " + (l-1) + ") | Número de Linhas : ";
-        
-        if (page == 0 && numPages() == 0) {
-          btn_prev.disabled = true;
-          btn_next.disabled = true;
-          return;
-        }
-
-        if (page == 1) {
-          btn_prev.disabled = true;
-        } else {
-          btn_prev.disabled = false;
-        }
-
-        if (page == numPages()) {
-          btn_next.disabled = true;
-        } else {
-          btn_next.disabled = false;
-        }
-      }
-      //------------------------------------------------------------
-      
-      //------------------------------------------------------------
-      function numPages() {
-        return Math.ceil((l - 1) / records_per_page);
-      }
-      //------------------------------------------------------------
-      
-      //------------------------------------------------------------
-      window.onload = function() {
-        var x = document.getElementById("number_of_rows").value;
-        records_per_page = x;
-        changePage(current_page);
-      };
-      //------------------------------------------------------------
-    </script>
+  <script src="script_recordtable.js"></script>
   </body>
 </html>
