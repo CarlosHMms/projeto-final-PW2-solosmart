@@ -143,7 +143,7 @@ html {font-family: Arial; display: inline-block; text-align: center;}
         display: inline-block;
         font-size: 14px;
         cursor: pointer;
-        float: center;
+        float: none;
       }
 
       .btn-group .button:not(:last-child) {
