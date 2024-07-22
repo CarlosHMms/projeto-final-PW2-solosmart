@@ -80,7 +80,7 @@
 
   <br>
 
-  <script src="script_recordtable.js"></script>
+  <script src="js/script_recordtable.js"></script>
 </body>
 
 </html>
