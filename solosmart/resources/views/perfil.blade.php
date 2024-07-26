@@ -10,7 +10,7 @@
 <body class="h-screen content-center items-center justify-items-center" style="background-color:#F5F8DE">
     <div class="content-center flex flex-col items-center justify-items-center w-full">
         <div class="container w-[40%] text-gary-950 font-semibold mx-8 flex flex-col justify-center items-center bg-[#F5F8DE] rounded-lg font-sans shadow-lg shadow-black">
-            <div class="mt-5 w-full">
+            <div class="mt-5 w-full justify-end mr-6 flex">
                 <svg fill="#000000" height="20px" width="20px" class="right-0" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     viewBox="0 0 47.971 47.971" xml:space="preserve">
                     <g>
@@ -23,17 +23,17 @@
             </div>
             <div>
                 <figure>
-                    <img src="profile.png" alt="">
+                    <img src="{{ asset('img/profile.png') }}" alt="">
                 </figure>
             </div>
             <div class="mb-5 mt-5">
-                <p class="text-[35px]">
+                <p class="text-lg md:text-xl">
                     Nome do Usuário
                 </p>
             </div>
             <div class="w-full text-left ml-7">
                 <div class="font-light mb-5">
-                    <p class="text-[20px] font-semibold">
+                    <p class="text-base md:text-lg font-semibold">
                         Informações de contato
                     </p>
                     <p>
@@ -44,7 +44,7 @@
                     </p>
                 </div>
                 <div class="font-light mb-5">
-                    <p class="text-[20px] font-semibold">
+                    <p class="text-base md:text-lg font-semibold">
                         Segunrança
                     </p>
                     <p>
