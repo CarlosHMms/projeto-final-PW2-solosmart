@@ -80,7 +80,7 @@
 
   <br>
 
-  <script src="js/script_recordtable.js"></script>
+  <script src="{{ asset('js/script_recordtable.js') }}"></script>
 </body>
 
 </html>

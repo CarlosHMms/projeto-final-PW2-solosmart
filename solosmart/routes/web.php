@@ -22,8 +22,8 @@ use App\Http\Controllers\TableController;
 });*/
 
 
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/login', [AuthController::class, 'autenticacao']);
+Route::get('/', [AuthController::class, 'login'])->name('login');
+Route::post('/', [AuthController::class, 'autenticacao']);
 
 Route::get('/cadastro', [AuthController::class, 'cadastro'])->name('cadastro');
 Route::post('/cadastro', [AuthController::class, 'register']);

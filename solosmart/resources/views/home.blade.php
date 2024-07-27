@@ -65,7 +65,7 @@
     </div>
   </div>
 
-  <script src="js/script_home.js"></script>
+  <script src="{{ asset('js/script_recordtable.js') }}"></script>
 </body>
 
 </html>
