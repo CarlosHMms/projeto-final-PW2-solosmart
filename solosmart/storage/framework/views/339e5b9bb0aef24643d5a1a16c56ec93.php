@@ -27,24 +27,16 @@
                 <input type="email" id="email" name="email" required class="font-light rounded-lg mb-2 h-[30px] p-[5px] w-[315px] border-[1px] border-solid border-black">
                 <label for="senha" class="w-full mb-2">Senha</label>
                 <input type="password" id="senha" name="senha" required class="font-light rounded-lg mb-2 h-[30px] p-[5px] w-[315px] border-[1px] border-solid border-black">
-                <div class="text-right w-full">
-                    <button>
-                        <p class="font-semibold text-xs">
-                            Esqueceu a senha?
-                        </p>
-                    </button>
-                </div>
+                <!--<div class="text-right w-full">
+                    <a href="http://" class="font-semibold text-xs">Esqueceu a senha?</a>
+                </div>-->
                 <button class="bg-[#41337A] rounded-lg flex flex-col justify-center items-center w-[315px] h-[45px] mb-3 mt-7">
                     <input type="submit" value="Entrar" class="text-lg md:text-xl text-white cursor-pointer">
                 </button>
                 <p class="font-normal text-xs md:text-sm">
                     Não possuí uma conta?
                 </p>
-                <button class="mb-5">
-                    <p class="text-xs md:text-sm">
-                        Cadastre-se
-                    </p>
-                </button>
+                <a href="<?php echo e(route('cadastro')); ?>" class="text-xs md:text-sm mb-5">Cadastre-se</a>
             </form>
         </div>
     </div>

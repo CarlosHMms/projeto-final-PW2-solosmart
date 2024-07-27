@@ -22,6 +22,7 @@
                 Cadastro
             </p>
             <form action="" method="GET" class="flex flex-col justify-center items-center text-left w-[310px] text-xs md:text-sm">
+                <?php echo csrf_field(); ?>
                 <label for="nome" class="w-full mb-2">Nome</label>
                 <input type="text" id="nome" name="nome" required class="font-light rounded-lg mb-2 h-[30px] p-[5px] w-[315px] border-[1px] border-solid border-black">
                 <label for="email" class="w-full mb-2">E-mail</label>
@@ -38,11 +39,7 @@
                 <p class="font-normal text-xs md:text-sm">
                     Já possuí uma conta?
                 </p>
-                <button class="mb-5">
-                    <p class="text-xs md:text-sm">
-                        Faça Login
-                    </p>
-                </button>
+                <a href="<?php echo e(route('login')); ?>" class="text-xs md:text-sm mb-5">Faça Login</a>
             </form>
         </div>
     </div>

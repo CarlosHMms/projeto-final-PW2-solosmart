@@ -39,11 +39,7 @@
                 <p class="font-normal text-xs md:text-sm">
                     Já possuí uma conta?
                 </p>
-                <button class="mb-5">
-                    <p class="text-xs md:text-sm">
-                        Faça Login
-                    </p>
-                </button>
+                <a href="{{ route('login')}}" class="text-xs md:text-sm mb-5">Faça Login</a>
             </form>
         </div>
     </div>
