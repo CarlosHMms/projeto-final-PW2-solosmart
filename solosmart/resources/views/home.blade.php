@@ -59,7 +59,7 @@
     <div class="cards">
       <div class="card header" style="border-radius: 15px;">
         <h3 style="font-size: 0.7rem;">ÚLTIMO DADO COLETADO DO ESP32 [ <span id="ESP32_01_LTRD"></span> ]</h3>
-        <button onclick="window.open('recordtable.php', '_blank');">Abrir Tabela de Gravação</button>
+        <button onclick="window.open('{{ route('tables') }}', '_blank');">Abrir Tabela de Gravação</button>
         <h3 style="font-size: 0.7rem;"></h3>
       </div>
     </div>
