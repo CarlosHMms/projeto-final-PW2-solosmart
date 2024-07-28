@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
     <link href="https://fonts.cdnfonts.com/css/fox-on-the-run" rel="stylesheet">
+    <script src="{{ asset('js/perfil.js') }}"></script>
     <title>Perfil</title>
 </head>
 <body class="h-screen content-center items-center justify-items-center" style="background-color:#F5F8DE">
@@ -16,6 +17,11 @@
                 </a>
             </div>
             <ul class="space-y-2 tracking-wide mt-8">
+                <li>
+                    <svg class="h-6 w-6 fill-white group-hover:fill-slate-300" viewBox="-1 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
+                        <path d="M16.416 9.579A7.917 7.917 0 1 1 8.5 1.662a7.916 7.916 0 0 1 7.916 7.917zm-9.992.046 4.248-4.248a.792.792 0 0 0-1.12-1.12L4.745 9.066a.792.792 0 0 0 0 1.12l4.809 4.808a.792.792 0 0 0 1.12-1.12z"/>
+                    </svg>
+                </li>
                 <li>
                     <a href="{{ route('home')}}" aria-label="dashboard" class="px-4 py-3 flex items-center space-x-4 rounded-md text-white group">
                         <svg class="h-6 w-6 fill-white group-hover:fill-slate-300" viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
