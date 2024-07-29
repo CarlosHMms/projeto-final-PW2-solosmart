@@ -28,9 +28,10 @@ class AuthController extends Controller
         }
     }
 
-    public function cadastro()
+    public function cadastro(Request $request){
     {
-        return view('cadastro');
+        
     }
 //
+}
 }
