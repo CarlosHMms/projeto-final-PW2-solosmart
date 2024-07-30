@@ -26,7 +26,7 @@ Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/', [AuthController::class, 'autenticacao']);
 
 Route::get('/cadastro', [AuthController::class, 'cadastro'])->name('cadastro');
-Route::post('/cadastro', [AuthController::class, 'register']);
+Route::post('/cadastro', [AuthController::class, 'cadastrarUsuario']);
 
 Route::get('/perfil', [ProfileController::class, 'perfil'])->name('perfil');
 Route::post('/perfil', [ProfileController::class, 'update']);
