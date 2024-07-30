@@ -17,3 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/solosmart/node_modules
+/solosmart/storage
+solosmart/.env
