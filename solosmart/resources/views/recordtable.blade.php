@@ -34,7 +34,7 @@
     </thead>
     <tbody id="tbody_table_record">
       <?php
-      include 'database.php';
+      include '../../config/database.php';
       $num = 0;
       $pdo = Database::connect();
       $sql = 'SELECT * FROM esp32_table_dht11_leds_record ORDER BY date, time';

@@ -8,6 +8,23 @@
     <link href="https://fonts.cdnfonts.com/css/fox-on-the-run" rel="stylesheet">
 </head>
 <body class="h-screen content-center items-center justify-items-center" style="background-color:#6D4C3D">
+    <!--Thiagão dps estiliza essa caixa aqui-->
+    @if (session('success'))
+        <div class="bg-[#31E981] p-3 text-white text-center">
+            {{ session('success') }}
+        </div>
+    @endif
+    @if (session('error'))
+        <div class="bg-[#FF0000] p-3 text-white text-center">
+            {{ session('error') }}
+        </div>
+    @endif
+    @if (session('errorEmailAlready'))
+        <div class="bg-[#FF0000] p-3 text-white text-center">
+            {{ session('errorEmailAlready') }}
+        </div>
+    @endif
+    
     <div class="content-center flex flex-col items-center justify-items-center w-full">
         <div class="container md:w-[500px] md:h-full w-full h-screen text-gary-950 font-semibold mx-8 flex flex-col justify-center items-center bg-[#F5F8DE] md:rounded-lg font-sans shadow-lg shadow-black">
             <div class="flex flex-col-1 space-x-2 text-[30px] md:text-[50px] mt-4 font-bold" style="font-family: 'Fox on the Run', sans-serif;">
@@ -27,8 +44,9 @@
                 <input type="text" id="nome" name="nome" required class="font-light rounded-lg mb-2 h-[30px] p-[5px] w-[315px] border-[1px] border-solid border-black">
                 <label for="email" class="w-full mb-2">E-mail</label>
                 <input type="email" id="email" name="email" required class="font-light rounded-lg mb-2 h-[30px] p-[5px] w-[315px] border-[1px] border-solid border-black">
-                <label for="telefone" class="w-full mb-2">Telefone</label>
+                <!--<label for="telefone" class="w-full mb-2">Telefone</label>
                 <input type="tel" id="telefone" name="telefone" required class="font-light rounded-lg mb-2 h-[30px] p-[5px] w-[315px] border-[1px] border-solid border-black">
+-->
                 <label for="senha" class="w-full mb-2">Senha</label>
                 <input type="password" id="senha" name="senha" required class="font-light rounded-lg mb-2 h-[30px] p-[5px] w-[315px] border-[1px] border-solid border-black">
                 <label for="csenha" class="w-full mb-2">Confirmar senha</label>
