@@ -21,7 +21,7 @@
             <p class="text-[20px] md:text-[30px] mt-5 mb-5">
                 Cadastro
             </p>
-            <form action="" method="GET" class="flex flex-col justify-center items-center text-left w-[310px] text-xs md:text-sm">
+            <form action="/cadastro" method="POST" class="flex flex-col justify-center items-center text-left w-[310px] text-xs md:text-sm">
                 @csrf
                 <label for="nome" class="w-full mb-2">Nome</label>
                 <input type="text" id="nome" name="nome" required class="font-light rounded-lg mb-2 h-[30px] p-[5px] w-[315px] border-[1px] border-solid border-black">
