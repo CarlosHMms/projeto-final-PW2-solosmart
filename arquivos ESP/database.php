@@ -5,6 +5,7 @@ class Database
 	private static $dbHost = 'localhost';
 	private static $dbUsername = 'super';
 	private static $dbUserPassword = '277353';
+
 	private static $cont = null;
 
 	public function __construct()

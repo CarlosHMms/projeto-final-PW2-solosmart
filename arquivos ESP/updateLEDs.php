@@ -1,5 +1,5 @@
 <?php
-require 'database.php';
+require_once 'database.php';
 
 if (!empty($_POST)) {
   // Coleta dos dados enviados via POST
