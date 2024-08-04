@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('status_read_sensor_dht11');
             $table->string('led_01');
             $table->string('led_02');
-            $table->timestamp('time');
+            $table->time('time');
             $table->date('date');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
