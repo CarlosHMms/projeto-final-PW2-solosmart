@@ -87,6 +87,40 @@
     .styled-table tr:nth-child(even) {
       background-color: #f9f9f9;
     }
+
+    .btn-group .button {
+        background-color: green;
+        border: 1px solid #e3e3e3;
+        color: white;
+        padding: 5px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+        float: center;
+      }
+
+      .btn-group .button:not(:last-child) {
+        border-right: none; 
+      }
+
+      .btn-group .button:hover {
+        background-color: darkgreen;
+      }
+
+      .btn-group .button:active {
+        background-color: green;
+        transform: translateY(1px);
+      }
+
+      .btn-group .button:disabled,
+      .button.disabled{
+        color:#fff;
+        background-color: #a0a0a0; 
+        cursor: not-allowed;
+        pointer-events:none;
+      }
   </style>
 </head>
 
