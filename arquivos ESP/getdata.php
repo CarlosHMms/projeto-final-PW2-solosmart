@@ -1,40 +1,44 @@
 <?php
-include 'database.php';
+require_once 'database.php';
 
-if (!empty($_POST)) {
+if (!empty($_POST['id'])) {
   $id = $_POST['id'];
 
-  $myObj = (object) array();
+  echo "Received ID: $id\n";
 
   $pdo = Database::connect();
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  // Seleciona a coluna user_id também
-  $sql = 'SELECT * FROM esp32_table_dht11_leds_update WHERE id = ?';
+  $sql = "SELECT * FROM esp32_table_dht11_leds_update WHERE id = ?";
   $q = $pdo->prepare($sql);
   $q->execute(array($id));
-  $row = $q->fetch(PDO::FETCH_ASSOC);
 
-  if ($row) {
-    $date = date_create($row['date']);
+  $data = $q->fetch(PDO::FETCH_ASSOC);
+
+  if ($data) {
+    // Formatação da data
+    $date = date_create($data['date']);
     $dateFormat = date_format($date, "d-m-Y");
 
-    $myObj->id = $row['id'];
-    $myObj->temperature = $row['temperature'];
-    $myObj->humidity = $row['humidity'];
-    $myObj->status_read_sensor_dht11 = $row['status_read_sensor_dht11'];
-    $myObj->LED_01 = $row['LED_01'];
-    $myObj->LED_02 = $row['LED_02'];
-    $myObj->ls_time = $row['time'];
-    $myObj->ls_date = $dateFormat;
-    $myObj->user_id = $row['user_id']; // Adicionado user_id
+    $response = array(
+      'id' => $data['id'],
+      'temperature' => $data['temperature'],
+      'humidity' => $data['humidity'],
+      'status_read_sensor_dht11' => $data['status_read_sensor_dht11'],
+      'LED_01' => $data['LED_01'],
+      'LED_02' => $data['LED_02'],
+      'ls_time' => $data['time'],
+      'ls_date' => $dateFormat,
+      'user_id' => $data['user_id'] // Incluindo user_id
+    );
 
-    $myJSON = json_encode($myObj);
-
-    echo $myJSON;
+    echo json_encode($response);
   } else {
     echo json_encode(array("error" => "No data found"));
   }
 
   Database::disconnect();
+} else {
+  echo json_encode(array("error" => "ID not set in POST data"));
 }
 ?>

@@ -117,7 +117,7 @@
     </thead>
     <tbody id="tbody_table_record">
       <?php
-      include 'database.php';
+      require_once 'database.php';
 
       try {
         $pdo = Database::connect();
@@ -137,8 +137,8 @@
           echo '<td class="bdr">' . htmlspecialchars($row['temperature']) . '</td>';
           echo '<td class="bdr">' . htmlspecialchars($row['humidity']) . '</td>';
           echo '<td class="bdr">' . htmlspecialchars($row['status_read_sensor_dht11']) . '</td>';
-          echo '<td class="bdr">' . htmlspecialchars($row['LED_01']) . '</td>';
-          echo '<td class="bdr">' . htmlspecialchars($row['LED_02']) . '</td>';
+          echo '<td class="bdr">' . htmlspecialchars(isset($row['LED_01']) ? $row['LED_01'] : 'N/A') . '</td>';
+          echo '<td class="bdr">' . htmlspecialchars(isset($row['LED_02']) ? $row['LED_02'] : 'N/A') . '</td>';
           echo '<td class="bdr">' . htmlspecialchars($row['time']) . '</td>';
           echo '<td>' . htmlspecialchars($dateFormat) . '</td>';
           echo '</tr>';
@@ -171,9 +171,7 @@
 
   <br>
 
-  <script>
-    // Adicione seu código JavaScript aqui para manipular a paginação e o número de linhas
-  </script>
+  <script src="script_recordtable.js"></script>
 </body>
 
 </html>
