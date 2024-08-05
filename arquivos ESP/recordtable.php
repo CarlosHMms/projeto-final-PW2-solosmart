@@ -42,7 +42,7 @@
     }
 
     th {
-      background-color: #f2f2f2;
+      background-color: gray;
     }
 
     tr:nth-child(even) {
