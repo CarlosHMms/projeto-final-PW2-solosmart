@@ -33,7 +33,7 @@
     </thead>
     <tbody id="tbody_table_record">
       <?php
-      include 'database.php';
+      require_once 'database.php';
       $num = 0;
 
       $pdo = Database::connect();
