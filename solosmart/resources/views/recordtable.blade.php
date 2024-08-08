@@ -23,7 +23,7 @@
         <th>ID</th>
         <th>PLACA</th>
         <th>TEMPERATURA (°C)</th>
-        <th>HUMIDADE (%)</th>
+        <th>UMIDADE (%)</th>
         <th>STATUS DE LEITURA SENSOR DHT11</th>
         <th>LED 01</th>
         <th>LED 02</th>
