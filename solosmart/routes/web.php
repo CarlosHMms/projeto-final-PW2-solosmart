@@ -35,6 +35,11 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 Route::get('/tabelas', [TableController::class, 'tabelas'])->name('tables');
 
+Route::post('/getdata.php', [DataController::class, 'getData']);
+
+Route::post('/updateDHT11data_and_recordtable.php', [DataController::class, 'updateData']);
+
+
 /*Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'home'])->name('home');
     Route::get('/tabelas', [TableController::class, 'tabelas'])->name('tables');
