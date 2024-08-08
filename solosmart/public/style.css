@@ -3,17 +3,6 @@ html {
     display: inline-block;
     text-align: center;
 }
-.evokeTable a{
-    text-decoration: none;
-    color :black;
-}
-.evokeTable{
-    border-collapse: collapse;
-    border: 1px solid #ddd;
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 5px;
-}
 
 p {
     font-size: 1.2rem;
@@ -175,8 +164,8 @@ input:disabled+.sliderTS {
 }
 
 .styled-table thead tr {
-    background-color: green;
-    color: white;
+    background-color: gray;
+    color: #ffffff;
     text-align: left;
 }
 
@@ -191,7 +180,7 @@ input:disabled+.sliderTS {
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: LightGrey;
+    background-color: #f3f3f3;
 }
 
 .styled-table tbody tr.active-row {
@@ -200,25 +189,27 @@ input:disabled+.sliderTS {
 }
 
 .bdr {
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+    border-right: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
 }
 
 td:hover {
-    background-color: rgba(12, 105, 128, 0.21);
+    background-color: rgba(80, 242, 148, 0.21);
 }
 
 tr:hover {
-    background-color: rgba(12, 105, 128, 0.15);
+    background-color: rgba(80, 242, 148, 0.15);
 }
 
 .styled-table tbody tr:nth-of-type(even):hover {
-    background-color: rgba(12, 105, 128, 0.15);
+    background-color: rgba(80, 242, 148, 0.15);
 }
+
 
 .btn-group .button {
     background-color: green;
-    border: 1px solid black;
+
+    border: 1px solid #e3e3e3;
     color: white;
     padding: 5px 8px;
     text-align: center;
@@ -226,15 +217,16 @@ tr:hover {
     display: inline-block;
     font-size: 14px;
     cursor: pointer;
-    float: none;
+    float: center;
 }
 
 .btn-group .button:not(:last-child) {
     border-right: none;
+
 }
 
 .btn-group .button:hover {
-    background-color: DarkGreen;
+    background-color: darkgreen;
 }
 
 .btn-group .button:active {
@@ -244,8 +236,8 @@ tr:hover {
 
 .btn-group .button:disabled,
 .button.disabled {
-    color: white;
-    background-color: gray;
+    color: #fff;
+    background-color: #a0a0a0;
     cursor: not-allowed;
     pointer-events: none;
 }
