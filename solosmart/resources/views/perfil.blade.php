@@ -140,11 +140,11 @@
                                 <dl class="text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
                                     <div class="flex flex-col pb-3">
                                         <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Nome</dt>
-                                        <dd class="text-lg font-semibold">nome</dd>
+                                        <dd class="text-lg font-semibold">Orlando </dd>
                                     </div>
                                     <div class="flex flex-col py-3">
                                         <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Sobrenome</dt>
-                                        <dd class="text-lg font-semibold">sobrenome</dd>
+                                        <dd class="text-lg font-semibold">Filho</dd>
                                     </div>
                                     <div class="flex flex-col py-3">
                                         <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Data de Nascimento</dt>

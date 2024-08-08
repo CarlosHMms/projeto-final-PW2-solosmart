@@ -4,6 +4,10 @@ html {
     text-align: center;
 }
 
+body {
+    background-color: #F5F8DE;
+}
+
 p {
     font-size: 1.2rem;
 }
@@ -18,13 +22,21 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: green;
+    background-color: #6D4C3D;
     color: white;
     font-size: 1.2rem;
 }
 
 .content {
     padding: 5px;
+}
+
+.evokeTable {
+    padding: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    background-color: gray;
 }
 
 .card {
@@ -114,7 +126,7 @@ body {
 }
 
 input:checked+.sliderTS {
-    background-color: DimGray;
+    background-color: blue;
 }
 
 input:focus+.sliderTS {
@@ -164,7 +176,7 @@ input:disabled+.sliderTS {
 }
 
 .styled-table thead tr {
-    background-color: gray;
+    background-color: #41337A;
     color: #ffffff;
     text-align: left;
 }
