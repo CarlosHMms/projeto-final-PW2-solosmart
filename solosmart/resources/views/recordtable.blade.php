@@ -32,7 +32,7 @@
     </svg>
   </span>
   <div class="flex-grow flex justify-center">
-    <a href="#">
+    <a href="{{ route('home')}}">
       <img class="h-[65px] w-[80px]" src="{{ asset('img/logo.png') }}" alt="Logo">
     </a>
   </div>
